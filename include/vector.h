@@ -755,5 +755,154 @@ void pop_isize_vec(isize_vector *vec) {
     vec->size--;
 }
 
+/*
+-------------------------------------
+------- erase vector function -------
+-------------------------------------
+*/
+void erase_i8_vec(i8_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_i16_vec(i16_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_i32_vec(i32_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_i64_vec(i64_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_u8_vec(u8_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_u16_vec(u16_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_u32_vec(u32_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_u64_vec(u64_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_f32_vec(f32_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_f64_vec(f64_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_usize_vec(usize_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
+void erase_isize_vec(isize_vector *vec, usize index) {
+    if (vec == NULL || index >= vec->size) {
+        return;
+    }
+
+    for (usize i = index; i + 1 < vec->size; i++) {
+        vec->data[i] = vec->data[i + 1];
+    }
+
+    vec->size--;
+}
+
 #endif // VECTOR_IMPL
 #endif // VECTOR_H
