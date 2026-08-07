@@ -654,5 +654,106 @@ isize at_isize_vec(isize_vector *vec, usize index) {
     return vec->data[index];
 }
 
+/*
+-------------------------------------
+------- pop vector function -------
+-------------------------------------
+*/
+void pop_i8_vec(i8_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_i16_vec(i16_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_i32_vec(i32_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_i64_vec(i64_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_u8_vec(u8_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_u16_vec(u16_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_u32_vec(u32_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_u64_vec(u64_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_f32_vec(f32_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_f64_vec(f64_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_usize_vec(usize_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
+void pop_isize_vec(isize_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return;
+    }
+
+    vec->size--;
+}
+
 #endif // VECTOR_IMPL
 #endif // VECTOR_H
