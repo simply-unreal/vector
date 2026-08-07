@@ -973,7 +973,7 @@ usize back_u64_vec(u64_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_f32_vec(f32_vector *vec) {
+f32 back_f32_vec(f32_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -981,7 +981,7 @@ usize back_f32_vec(f32_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_f64_vec(f64_vector *vec) {
+f64 back_f64_vec(f64_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1090,6 +1090,21 @@ f64 first_f64_vec(f64_vector *vec) {
     return vec->data[0];
 }
 
+usize first_usize_vec(usize_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return 0;
+    }
+
+    return vec->data[0];
+}
+
+usize first_isize_vec(isize_vector *vec) {
+    if (vec == NULL || vec->size == 0) {
+        return 0;
+    }
+
+    return vec->data[0];
+}
 
 #endif // VECTOR_IMPL
 #endif // VECTOR_H
