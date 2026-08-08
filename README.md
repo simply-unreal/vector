@@ -1,4 +1,4 @@
-# vector
+# Vector
 
 A single-header, easy to use, dynamic array in C
 
