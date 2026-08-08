@@ -37,6 +37,7 @@ i8* data_i8_vec(i8_vector *vec);
 usize capacity_i8_vec(i8_vector *vec);
 usize size_i8_vec(i8_vector *vec);
 void clear_i8_vec(i8_vector *vec);
+void push_i8_vec(i8_vector *vec, i8 val);
 bool empty_i8_vec(i8_vector *vec);
 void resize_i8_vec(i8_vector *vec);
 void shrink_to_fit_i8_vec(i8_vector *vec);
@@ -53,6 +54,7 @@ i16* data_i16_vec(i16_vector *vec);
 usize capacity_i16_vec(i16_vector *vec);
 usize size_i16_vec(i16_vector *vec);
 void clear_i16_vec(i16_vector *vec);
+void push_i16_vec(i16_vector *vec, i16 val);
 bool empty_i16_vec(i16_vector *vec);
 void resize_i16_vec(i16_vector *vec);
 void shrink_to_fit_i16_vec(i16_vector *vec);
@@ -69,6 +71,7 @@ i32* data_i32_vec(i32_vector *vec);
 usize capacity_i32_vec(i32_vector *vec);
 usize size_i32_vec(i32_vector *vec);
 void clear_i32_vec(i32_vector *vec);
+void push_i32_vec(i32_vector *vec, i32 val);
 bool empty_i32_vec(i32_vector *vec);
 void resize_i32_vec(i32_vector *vec);
 void shrink_to_fit_i32_vec(i32_vector *vec);
@@ -85,6 +88,7 @@ i64* data_i64_vec(i64_vector *vec);
 usize capacity_i64_vec(i64_vector *vec);
 usize size_i64_vec(i64_vector *vec);
 void clear_i64_vec(i64_vector *vec);
+void push_i64_vec(i64_vector *vec, i64 val);
 bool empty_i64_vec(i64_vector *vec);
 void resize_i64_vec(i64_vector *vec);
 void shrink_to_fit_i64_vec(i64_vector *vec);
@@ -101,6 +105,7 @@ u8* data_u8_vec(u8_vector *vec);
 usize capacity_u8_vec(u8_vector *vec);
 usize size_u8_vec(u8_vector *vec);
 void clear_u8_vec(u8_vector *vec);
+void push_u8_vec(u8_vector *vec, u8 val);
 bool empty_u8_vec(u8_vector *vec);
 void resize_u8_vec(u8_vector *vec);
 void shrink_to_fit_u8_vec(u8_vector *vec);
@@ -117,6 +122,7 @@ u16* data_u16_vec(u16_vector *vec);
 usize capacity_u16_vec(u16_vector *vec);
 usize size_u16_vec(u16_vector *vec);
 void clear_u16_vec(u16_vector *vec);
+void push_u16_vec(u16_vector *vec, u16 val);
 bool empty_u16_vec(u16_vector *vec);
 void resize_u16_vec(u16_vector *vec);
 void shrink_to_fit_u16_vec(u16_vector *vec);
@@ -133,6 +139,7 @@ u32* data_u32_vec(u32_vector *vec);
 usize capacity_u32_vec(u32_vector *vec);
 usize size_u32_vec(u32_vector *vec);
 void clear_u32_vec(u32_vector *vec);
+void push_u32_vec(u32_vector *vec, u32 val);
 bool empty_u32_vec(u32_vector *vec);
 void resize_u32_vec(u32_vector *vec);
 void shrink_to_fit_u32_vec(u32_vector *vec);
@@ -149,6 +156,7 @@ u64* data_u64_vec(u64_vector *vec);
 usize capacity_u64_vec(u64_vector *vec);
 usize size_u64_vec(u64_vector *vec);
 void clear_u64_vec(u64_vector *vec);
+void push_u64_vec(u64_vector *vec, u64 val);
 bool empty_u64_vec(u64_vector *vec);
 void resize_u64_vec(u64_vector *vec);
 void shrink_to_fit_u64_vec(u64_vector *vec);
@@ -165,6 +173,7 @@ f32* data_f32_vec(f32_vector *vec);
 usize capacity_f32_vec(f32_vector *vec);
 usize size_f32_vec(f32_vector *vec);
 void clear_f32_vec(f32_vector *vec);
+void push_f32_vec(f32_vector *vec, f32 val);
 bool empty_f32_vec(f32_vector *vec);
 void resize_f32_vec(f32_vector *vec);
 void shrink_to_fit_f32_vec(f32_vector *vec);
@@ -181,6 +190,7 @@ f64* data_f64_vec(f64_vector *vec);
 usize capacity_f64_vec(f64_vector *vec);
 usize size_f64_vec(f64_vector *vec);
 void clear_f64_vec(f64_vector *vec);
+void push_f64_vec(f64_vector *vec, f64 val);
 bool empty_f64_vec(f64_vector *vec);
 void resize_f64_vec(f64_vector *vec);
 void shrink_to_fit_f64_vec(f64_vector *vec);
@@ -197,6 +207,7 @@ usize* data_usize_vec(usize_vector *vec);
 usize capacity_usize_vec(usize_vector *vec);
 usize size_usize_vec(usize_vector *vec);
 void clear_usize_vec(usize_vector *vec);
+void push_usize_vec(usize_vector *vec, usize val);
 bool empty_usize_vec(usize_vector *vec);
 void resize_usize_vec(usize_vector *vec);
 void shrink_to_fit_usize_vec(usize_vector *vec);
@@ -213,6 +224,7 @@ isize* data_isize_vec(isize_vector *vec);
 isize capacity_isize_vec(isize_vector *vec);
 isize size_isize_vec(isize_vector *vec);
 void clear_isize_vec(isize_vector *vec);
+void push_isize_vec(isize_vector *vec, isize val);
 bool empty_isize_vec(isize_vector *vec);
 void resize_isize_vec(isize_vector *vec);
 void shrink_to_fit_isize_vec(isize_vector *vec);
@@ -224,6 +236,7 @@ void shrink_to_fit_isize_vec(isize_vector *vec);
 ------- init vector function -------
 -------------------------------------
 */
+
 i8_vector init_i8_vec() {
     i8_vector vec;
 
@@ -409,6 +422,7 @@ isize_vector init_isize_vec() {
 ------- free vector function -------
 -------------------------------------
 */
+
 void free_i8_vec(i8_vector *vec) {
     if (vec == NULL) {
         return;
@@ -558,6 +572,7 @@ void free_isize_vec(isize_vector *vec) {
 ------- at vector function -------
 -------------------------------------
 */
+
 i8 at_i8_vec(i8_vector *vec, usize index) {
     if (vec == NULL || index >= vec->size) {
         return 0;
@@ -659,6 +674,7 @@ isize at_isize_vec(isize_vector *vec, usize index) {
 ------- pop vector function -------
 -------------------------------------
 */
+
 void pop_i8_vec(i8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return;
@@ -760,6 +776,7 @@ void pop_isize_vec(isize_vector *vec) {
 ------- erase vector function -------
 -------------------------------------
 */
+
 void erase_i8_vec(i8_vector *vec, usize index) {
     if (vec == NULL || index >= vec->size) {
         return;
@@ -909,6 +926,7 @@ void erase_isize_vec(isize_vector *vec, usize index) {
 ------- back vector function -------
 -------------------------------------
 */
+
 i8 back_i8_vec(i8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
@@ -1010,6 +1028,7 @@ isize back_isize_vec(isize_vector *vec) {
 ------- front vector function -------
 -------------------------------------
 */
+
 i8 first_i8_vec(i8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
@@ -1111,6 +1130,7 @@ isize first_isize_vec(isize_vector *vec) {
 ------- data vector function -------
 -------------------------------------
 */
+
 i8* data_i8_vec(i8_vector *vec) {
     if (vec == NULL) {
         return NULL;
@@ -1212,6 +1232,7 @@ isize* data_isize_vec(isize_vector *vec) {
 ------- capacity vector function -------
 -------------------------------------
 */
+
 usize capacity_i8_vec(i8_vector *vec) {
     if (vec == NULL) {
         return 0;
@@ -1313,6 +1334,7 @@ usize capacity_isize_vec(isize_vector *vec) {
 ------- size vector function -------
 -------------------------------------
 */
+
 usize size_i8_vec(i8_vector *vec) {
     if (vec == NULL) {
         return 0;
@@ -1414,6 +1436,7 @@ usize size_isize_vec(isize_vector *vec) {
 ------- clear vector function -------
 -------------------------------------
 */
+
 void clear_i8_vec(i8_vector *vec) {
     if (vec == NULL) {
         return;
@@ -1508,6 +1531,330 @@ void clear_isize_vec(isize_vector *vec) {
     }
 
     vec->size = 0;
+}
+
+/*
+-------------------------------------
+------- push vector function -------
+-------------------------------------
+*/
+
+void push_i8_vec(i8_vector *vec, i8 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        i8 *tmp = realloc(vec->data, new_capacity * sizeof(i8));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_i16_vec(i16_vector *vec, i16 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        i16 *tmp = realloc(vec->data, new_capacity * sizeof(i16));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_i32_vec(i32_vector *vec, i32 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        i32 *tmp = realloc(vec->data, new_capacity * sizeof(i32));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_i64_vec(i64_vector *vec, i64 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        i64 *tmp = realloc(vec->data, new_capacity * sizeof(i64));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_u8_vec(u8_vector *vec, u8 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        u8 *tmp = realloc(vec->data, new_capacity * sizeof(u8));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_u16_vec(u16_vector *vec, u16 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        u16 *tmp = realloc(vec->data, new_capacity * sizeof(u16));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_u32_vec(u32_vector *vec, u32 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        u32 *tmp = realloc(vec->data, new_capacity * sizeof(u32));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_u64_vec(u64_vector *vec, u64 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        u64 *tmp = realloc(vec->data, new_capacity * sizeof(u64));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_f32_vec(f32_vector *vec, f32 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        f32 *tmp = realloc(vec->data, new_capacity * sizeof(f32));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_f64_vec(f64_vector *vec, f64 val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        f64 *tmp = realloc(vec->data, new_capacity * sizeof(f64));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_usize_vec(usize_vector *vec, usize val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        usize *tmp = realloc(vec->data, new_capacity * sizeof(usize));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+void push_isize_vec(usize_vector *vec, isize val) {
+    if (vec == NULL) {
+        return;
+    }
+
+    if (vec->size >= vec->capacity) {
+        usize new_capacity = vec->capacity * 2;
+        isize *tmp = realloc(vec->data, new_capacity * sizeof(isize));
+
+        if (tmp == NULL) {
+            vec->err = true;
+            return;
+        }
+
+        vec->capacity = new_capacity;
+        vec->data = tmp;
+    }
+
+    vec->data[vec->size] = val;
+    vec->size++;
+}
+
+/*
+-------------------------------------
+------- empty vector function -------
+-------------------------------------
+*/
+
+bool empty_i8_vec(i8_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_i16_vec(i16_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_i32_vec(i32_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_i64_vec(i64_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_u8_vec(u8_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_u16_vec(u16_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_u32_vec(u32_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_u64_vec(u64_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_f32_vec(f32_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_f64_vec(f64_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_usize_vec(usize_vector *vec) {
+    return vec->size == 0;
+}
+
+bool empty_isize_vec(isize_vector *vec) {
+    return vec->size == 0;
 }
 
 #endif // VECTOR_IMPL
