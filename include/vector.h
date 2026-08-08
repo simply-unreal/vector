@@ -31,8 +31,8 @@ void free_i8_vec(i8_vector *vec);
 i8 at_i8_vec(i8_vector *vec, usize index);
 void pop_i8_vec(i8_vector *vec);
 void erase_i8_vec(i8_vector *vec, usize index);
-usize back_i8_vec(i8_vector *vec);
-usize first_i8_vec(i8_vector *vec);
+i8 back_i8_vec(i8_vector *vec);
+i8 first_i8_vec(i8_vector *vec);
 i8* data_i8_vec(i8_vector *vec);
 usize capacity_i8_vec(i8_vector *vec);
 usize size_i8_vec(i8_vector *vec);
@@ -47,8 +47,8 @@ void free_i16_vec(i16_vector *vec);
 i16 at_i16_vec(i16_vector *vec, usize index);
 void pop_i16_vec(i16_vector *vec);
 void erase_i16_vec(i16_vector *vec, usize index);
-usize back_i16_vec(i16_vector *vec);
-usize first_i16_vec(i16_vector *vec);
+i16 back_i16_vec(i16_vector *vec);
+i16 first_i16_vec(i16_vector *vec);
 i16* data_i16_vec(i16_vector *vec);
 usize capacity_i16_vec(i16_vector *vec);
 usize size_i16_vec(i16_vector *vec);
@@ -63,8 +63,8 @@ void free_i32_vec(i32_vector *vec);
 i32 at_i32_vec(i32_vector *vec, usize index);
 void pop_i32_vec(i32_vector *vec);
 void erase_i32_vec(i32_vector *vec, usize index);
-usize back_i32_vec(i32_vector *vec);
-usize first_i32_vec(i32_vector *vec);
+i32 back_i32_vec(i32_vector *vec);
+i32 first_i32_vec(i32_vector *vec);
 i32* data_i32_vec(i32_vector *vec);
 usize capacity_i32_vec(i32_vector *vec);
 usize size_i32_vec(i32_vector *vec);
@@ -79,8 +79,8 @@ void free_i64_vec(i64_vector *vec);
 i64 at_i64_vec(i64_vector *vec, usize index);
 void pop_i64_vec(i64_vector *vec);
 void erase_i64_vec(i64_vector *vec, usize index);
-usize back_i64_vec(i64_vector *vec);
-usize first_i64_vec(i64_vector *vec);
+i64 back_i64_vec(i64_vector *vec);
+i64 first_i64_vec(i64_vector *vec);
 i64* data_i64_vec(i64_vector *vec);
 usize capacity_i64_vec(i64_vector *vec);
 usize size_i64_vec(i64_vector *vec);
@@ -95,8 +95,8 @@ void free_u8_vec(u8_vector *vec);
 u8 at_u8_vec(u8_vector *vec, usize index);
 void pop_u8_vec(u8_vector *vec);
 void erase_u8_vec(u8_vector *vec, usize index);
-usize back_u8_vec(u8_vector *vec);
-usize first_u8_vec(u8_vector *vec);
+u8 back_u8_vec(u8_vector *vec);
+u8 first_u8_vec(u8_vector *vec);
 u8* data_u8_vec(u8_vector *vec);
 usize capacity_u8_vec(u8_vector *vec);
 usize size_u8_vec(u8_vector *vec);
@@ -111,8 +111,8 @@ void free_u16_vec(u16_vector *vec);
 u16 at_u16_vec(u16_vector *vec, usize index);
 void pop_u16_vec(u16_vector *vec);
 void erase_u16_vec(u16_vector *vec, usize index);
-usize back_u16_vec(u16_vector *vec);
-usize first_u16_vec(u16_vector *vec);
+u16 back_u16_vec(u16_vector *vec);
+u16 first_u16_vec(u16_vector *vec);
 u16* data_u16_vec(u16_vector *vec);
 usize capacity_u16_vec(u16_vector *vec);
 usize size_u16_vec(u16_vector *vec);
@@ -127,8 +127,8 @@ void free_u32_vec(u32_vector *vec);
 u32 at_u32_vec(u32_vector *vec, usize index);
 void pop_u32_vec(u32_vector *vec);
 void erase_u32_vec(u32_vector *vec, usize index);
-usize back_u32_vec(u32_vector *vec);
-usize first_u32_vec(u32_vector *vec);
+u32 back_u32_vec(u32_vector *vec);
+u32 first_u32_vec(u32_vector *vec);
 u32* data_u32_vec(u32_vector *vec);
 usize capacity_u32_vec(u32_vector *vec);
 usize size_u32_vec(u32_vector *vec);
@@ -143,8 +143,8 @@ void free_u64_vec(u64_vector *vec);
 u64 at_u64_vec(u64_vector *vec, usize index);
 void pop_u64_vec(u64_vector *vec);
 void erase_u64_vec(u64_vector *vec, usize index);
-usize back_u64_vec(u64_vector *vec);
-usize first_u64_vec(u64_vector *vec);
+u64 back_u64_vec(u64_vector *vec);
+u64 first_u64_vec(u64_vector *vec);
 u64* data_u64_vec(u64_vector *vec);
 usize capacity_u64_vec(u64_vector *vec);
 usize size_u64_vec(u64_vector *vec);
@@ -207,8 +207,8 @@ void free_isize_vec(isize_vector *vec);
 isize at_isize_vec(isize_vector *vec, usize index);
 void pop_isize_vec(isize_vector *vec);
 void erase_isize_vec(isize_vector *vec, usize index);
-usize back_isize_vec(isize_vector *vec);
-usize first_isize_vec(isize_vector *vec);
+isize back_isize_vec(isize_vector *vec);
+isize first_isize_vec(isize_vector *vec);
 isize* data_isize_vec(isize_vector *vec);
 isize capacity_isize_vec(isize_vector *vec);
 isize size_isize_vec(isize_vector *vec);
@@ -909,7 +909,7 @@ void erase_isize_vec(isize_vector *vec, usize index) {
 ------- back vector function -------
 -------------------------------------
 */
-usize back_i8_vec(i8_vector *vec) {
+i8 back_i8_vec(i8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -917,7 +917,7 @@ usize back_i8_vec(i8_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_i16_vec(i16_vector *vec) {
+i16 back_i16_vec(i16_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -925,7 +925,7 @@ usize back_i16_vec(i16_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_i32_vec(i32_vector *vec) {
+i32 back_i32_vec(i32_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -933,7 +933,7 @@ usize back_i32_vec(i32_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_i64_vec(i64_vector *vec) {
+i64 back_i64_vec(i64_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -941,7 +941,7 @@ usize back_i64_vec(i64_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_u8_vec(u8_vector *vec) {
+u8 back_u8_vec(u8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -949,7 +949,7 @@ usize back_u8_vec(u8_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_u16_vec(u16_vector *vec) {
+u16 back_u16_vec(u16_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -957,7 +957,7 @@ usize back_u16_vec(u16_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_u32_vec(u32_vector *vec) {
+u32 back_u32_vec(u32_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -965,7 +965,7 @@ usize back_u32_vec(u32_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_u64_vec(u64_vector *vec) {
+u64 back_u64_vec(u64_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -997,7 +997,7 @@ usize back_usize_vec(usize_vector *vec) {
     return vec->data[vec->size - 1];
 }
 
-usize back_isize_vec(isize_vector *vec) {
+isize back_isize_vec(isize_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1010,7 +1010,7 @@ usize back_isize_vec(isize_vector *vec) {
 ------- front vector function -------
 -------------------------------------
 */
-usize first_i8_vec(i8_vector *vec) {
+i8 first_i8_vec(i8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1018,7 +1018,7 @@ usize first_i8_vec(i8_vector *vec) {
     return vec->data[0];
 }
 
-usize first_i16_vec(i16_vector *vec) {
+i16 first_i16_vec(i16_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1026,7 +1026,7 @@ usize first_i16_vec(i16_vector *vec) {
     return vec->data[0];
 }
 
-usize first_i32_vec(i32_vector *vec) {
+i32 first_i32_vec(i32_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1034,7 +1034,7 @@ usize first_i32_vec(i32_vector *vec) {
     return vec->data[0];
 }
 
-usize first_i64_vec(i64_vector *vec) {
+i64 first_i64_vec(i64_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1042,7 +1042,7 @@ usize first_i64_vec(i64_vector *vec) {
     return vec->data[0];
 }
 
-usize first_u8_vec(u8_vector *vec) {
+u8 first_u8_vec(u8_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1050,7 +1050,7 @@ usize first_u8_vec(u8_vector *vec) {
     return vec->data[0];
 }
 
-usize first_u16_vec(u16_vector *vec) {
+u16 first_u16_vec(u16_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1058,7 +1058,7 @@ usize first_u16_vec(u16_vector *vec) {
     return vec->data[0];
 }
 
-usize first_u32_vec(u32_vector *vec) {
+u32 first_u32_vec(u32_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1066,7 +1066,7 @@ usize first_u32_vec(u32_vector *vec) {
     return vec->data[0];
 }
 
-usize first_u64_vec(u64_vector *vec) {
+u64 first_u64_vec(u64_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
@@ -1098,12 +1098,315 @@ usize first_usize_vec(usize_vector *vec) {
     return vec->data[0];
 }
 
-usize first_isize_vec(isize_vector *vec) {
+isize first_isize_vec(isize_vector *vec) {
     if (vec == NULL || vec->size == 0) {
         return 0;
     }
 
     return vec->data[0];
+}
+
+/*
+-------------------------------------
+------- data vector function -------
+-------------------------------------
+*/
+i8* data_i8_vec(i8_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+i16* data_i16_vec(i16_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+i32* data_i32_vec(i32_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+i64* data_i64_vec(i64_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+u8* data_u8_vec(u8_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+u16* data_u16_vec(u16_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+u32* data_u32_vec(u32_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+u64* data_u64_vec(u64_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+f32* data_f32_vec(f32_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+f64* data_f64_vec(f64_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+usize* data_usize_vec(usize_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+isize* data_isize_vec(isize_vector *vec) {
+    if (vec == NULL) {
+        return NULL;
+    }
+
+    return vec->data;
+}
+
+/*
+-------------------------------------
+------- capacity vector function -------
+-------------------------------------
+*/
+usize capacity_i8_vec(i8_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_i16_vec(i16_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_i32_vec(i32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_i64_vec(i64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_u8_vec(u8_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_u16_vec(u16_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_u32_vec(u32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_u64_vec(u64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_f32_vec(f32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_f64_vec(f64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_usize_vec(usize_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+usize capacity_isize_vec(isize_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->capacity;
+}
+
+/*
+-------------------------------------
+------- size vector function -------
+-------------------------------------
+*/
+usize size_i8_vec(i8_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_i16_vec(i16_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_i32_vec(i32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_i64_vec(i64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_u8_vec(u8_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_u16_vec(u16_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_u32_vec(u32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_u64_vec(u64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_f32_vec(f32_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_f64_vec(f64_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_usize_vec(usize_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
+}
+
+usize size_isize_vec(isize_vector *vec) {
+    if (vec == NULL) {
+        return 0;
+    }
+
+    return vec->size;
 }
 
 #endif // VECTOR_IMPL
