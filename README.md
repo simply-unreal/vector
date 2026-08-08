@@ -144,6 +144,7 @@ if (v.err) {
 
 - **`max_vec_size()` is declared but not implemented.** It's listed at the top of the header (`usize max_vec_size();`) with no matching definition under `VECTOR_IMPL`. Calling it will fail at link time until it's implemented.
 - No `generic` vector yet — you must call the type-suffixed function directly (`push_i32_vec`, not a generic `push_vec`).
+- No `char` or `bool` vector yet.
 - Not thread-safe; no internal locking.
 - No iterator/foreach helpers — iterate manually with `size_TYPE_vec` + `at_TYPE_vec`, or use `data_TYPE_vec` for direct pointer access.
 
